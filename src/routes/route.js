@@ -8,10 +8,10 @@ route.get("/", (req, res) => {
   res.send("hello testing");
 });
 
-route.post("/signup", signup);
-route.post("/login", login);
-route.post('/users/:userId/articles', authentication, createArticle);
-route.get("/articles", authentication, getallArticle);
-route.put('/users/:userId', authentication, updateUser);
+route.post("/api/signup", signup);
+route.post("/api/login", login);
+route.post('/api/users/:userId/articles', authentication, createArticle);
+route.get("/api/articles", authentication, getallArticle);
+route.put('/api/users/:userId', authentication, updateUser);
 
 module.exports = route;

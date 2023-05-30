@@ -20,10 +20,9 @@ const DBConnection = async () => {
 }
 DBConnection()
 
-app.use("/", (req, res) => {
-    res.send("Welcome to this backend project url");
-})
-app.use("/api", route);
+
+
+app.use("/", route);
 
 
 app.listen(process.env.PORT || 5000, function () {
