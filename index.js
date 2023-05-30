@@ -21,7 +21,7 @@ const DBConnection = async () => {
 DBConnection()
 
 
-app.use("/",(req, res) => {
+app.get("/",(req, res) => {
     res.send("Welcome to backend api testing");
 });
 
