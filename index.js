@@ -22,7 +22,7 @@ DBConnection()
 
 
 
-app.use("/api", route);
+app.use("/", route);
 
 
 app.listen(process.env.PORT || 5000, function () {
