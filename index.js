@@ -21,8 +21,17 @@ const DBConnection = async () => {
 DBConnection()
 
 
+app.use("/",(req, res) => {
+    res.send("Welcome to backend api testing");
+});
 
 app.use("/api", route);
+
+app.all('*', function (req, res) {
+    return res
+        .status(400)
+        .send("Welcome to spLooT----");
+});
 
 
 app.listen(process.env.PORT || 5000, function () {
